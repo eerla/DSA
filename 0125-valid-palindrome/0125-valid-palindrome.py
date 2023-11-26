@@ -10,9 +10,8 @@ class Solution:
             return True
         
         l, r = 0, len(newstr)-1
-        # print(l,r)
+
         while r>=l:
-            # print(l,r)
             if newstr[l] == newstr[r]:
                 l+=1
                 r-=1

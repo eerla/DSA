@@ -4,22 +4,16 @@ class Solution:
             return 0
         
         uniqsortedlist = sorted(set(nums))
-        # print(sortednums)
+        maxL, curL = 1, 1
         
-        print(uniqsortedlist)
-        maxL = 0
-        curL = 0
         for i in range(len(uniqsortedlist)):
-            # print(uniqsortedlist[i])
             if uniqsortedlist[i] - uniqsortedlist[i-1] == 1 and i > 0:
-                # print(i, uniqsortedlist[i],uniqsortedlist[i-1])
                 curL += 1
                 maxL = max(curL, maxL)
-                # print(f"cL:{curL}, mL:{maxL}")
             else:
-                curL = 0
+                curL = 1
                 i-=1
-        return maxL+1
+        return maxL
     
 
 # class Solution:

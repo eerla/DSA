@@ -6,7 +6,6 @@ class Solution:
         def backtrack(openN, closedN, path):
             if openN == closedN == n:
                 res.append(path)
-            
             if openN < n:
                 backtrack(openN+1, closedN, path+'(')
             if closedN < openN:
